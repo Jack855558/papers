@@ -12,7 +12,8 @@ app = FastAPI()
 
 # Allow your frontend origin (or “*” for everything, though that’s less secure)
 origins = [
-    "http://localhost:3000"
+    "http://localhost:3000", 
+    "https://jack855558.github.io/papers/"
 ]
 
 app.add_middleware(
