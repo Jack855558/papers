@@ -18,7 +18,7 @@ export default function SearchPapers() {
         setError(null);
 
         try {
-            const resp = await fetch("https://my-fastapi-app.onrender.com/query/", {
+            const resp = await fetch("https://papers-bial.onrender.com", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
