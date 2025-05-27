@@ -18,13 +18,14 @@ export default function SearchPapers() {
         setError(null);
 
         try {
-            const resp = await fetch("http://localhost:8000/query/", {
+            const resp = await fetch("https://my-fastapi-app.onrender.com/query/", {
                 method: "POST",
                 headers: {
-                    "Content-Type": "application/json",
+                    "Content-Type": "application/json"
                 },
-                body: JSON.stringify({ prompt, top_k: 5 }),
+                body: JSON.stringify({ prompt: "example", top_k: 5 })
             });
+
 
             if (!resp.ok) {
                 throw new Error(`API error: ${resp.status}`);
